@@ -1,0 +1,291 @@
+body{
+  /* background-image: url("./bp.jpg"); */
+  height: 100%;
+  background-image: url("./boygirl.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+html{
+  height: 100%;
+}
+h2{
+  margin:0;
+  padding:0;
+  text-align: center;
+  font-size: 3rem;
+}
+h1{
+  margin:0;
+  padding:5px;
+  text-align: center;
+  font-size: 4rem;
+  
+}
+
+.boy-count{
+  border: #07d5fe 10px solid;
+  border-radius: 50%;
+  width: 6rem;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+.girl-count{
+  border: #ff02b4 10px solid;
+  border-radius: 50%;
+  width: 6rem;
+  margin-left:auto;
+  margin-right: auto;
+}
+
+/* .results{
+  margin-top: 15rem;
+} */
+
+.first-half{
+  color:#ff02b4 ;
+  
+}
+
+.second-half{
+  color:#1d2fd3
+}
+
+form{
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0rem;
+}
+
+.team-boy{
+  
+  float:left;
+}
+.team-girl{
+  
+  float: right;
+}
+.jumbotron{
+  
+}
+.header{
+  padding-top: 2rem;
+  margin-left: auto;
+  margin-right:auto;
+  font-family: 'Acme', sans-serif;
+  color: rgb(46, 46, 0);
+  
+}
+.head-container{
+  background-color: rgb(143, 102, 49);
+  font-family: 'Acme', sans-serif;
+  text-align: center;
+  background-color:rgb(49, 1, 1);
+  opacity:0.8;
+}
+.gender-form{
+  padding-top: 16rem;
+  max-width: 50%;
+}
+.input-container{
+  min-width: 50%;
+  min-height: 30rem;
+  
+  background-size:100% 100%;
+  /* padding-top: 23rem; */
+  padding-left: auto;
+  padding-right: auto;
+  
+   /* Full height */
+   height: 100%;
+
+   /* Center and scale the image nicely */
+   
+  
+}
+.checkbox{
+  padding-top: 1rem;
+}
+.boy{
+  font-family: 'Acme', sans-serif;
+  font-size: 2rem;
+  background-color: #07d5fe;
+  border: #ff02b4 6px solid;
+  border-radius: 30px;
+  text-align: center;
+  position: center;
+  margin-top: 3rem;
+}
+.girl{
+  font-family: 'Acme', sans-serif;
+  font-size: 1rem;
+  margin-top:1rem;
+  background-color: #ff02b4;
+  border: #ff02b4 10px solid;
+  border-radius: 30px;
+  text-align: center;
+}
+
+.submit{
+  margin-top: 0.5rem;
+  width: 100%;
+  border-radius: 30px;
+}
+
+.announce{
+  font-family: 'Acme', sans-serif;
+  text-align:center;
+  font-size: 2rem;
+  /* background-image: repeating-linear-gradient(#07d5fe, #ff02b4 ); */
+  background-image: linear-gradient(to left, #f8d7d9,#539edb );    
+  opacity: 1;
+  margin-left:0;
+  margin-right:0;
+}
+#header {
+    margin-bottom: 0;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: turquoise;
+    color: white;
+    text-align: center;
+}
+
+.needName {
+    color: red;
+}
+
+.needNameDefault {
+    visibility: hidden;
+    font-weight: bold;
+}
+.needNameTextbox {
+    border-color: red;
+}
+
+.raffleBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.winner {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+  font-weight: bolder;
+}
+.wrapper {
+  max-width: 500px;
+  margin: auto;
+  height: 500px;
+  padding-top: 200px;
+}
+
+  /* The Overlay (background) */
+.overlay {
+    /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+    height: 100%;
+    width: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0); /* Black fallback color */
+    background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+  
+  /* Position the content inside the overlay */
+.overlay-content {
+    position: relative;
+    top: 25%; /* 25% from the top */
+    width: 100%; /* 100% width */
+    text-align: center; /* Centered text/links */
+    margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+  
+  /* The navigation links inside the overlay */
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block; /* Display block instead of inline */
+    transition: 0.3s; /* Transition effects on hover (color) */
+}
+  
+  /* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+  
+  /* Position the close button (top right corner) */
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+  
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+}
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type='checkbox'],
+  input[type='radio'] {
+    --active: #275EFE;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, .25);
+    --border: #BBC1E1;
+    --border-hover: #275EFE;
+    --background: #fff;
+    --disabled: #F6F8FF;
+    --disabled-inner: #E1E6F9;
+  }
+}
+
+input {
+  border: 5px solid white; 
+  -webkit-box-shadow: 
+    inset 0 0 8px  rgba(0,0,0,0.1),
+          0 0 16px rgba(0,0,0,0.1); 
+  -moz-box-shadow: 
+    inset 0 0 8px  rgba(0,0,0,0.1),
+          0 0 16px rgba(0,0,0,0.1); 
+  box-shadow: 
+    inset 0 0 8px  rgba(0,0,0,0.1),
+          0 0 16px rgba(0,0,0,0.1); 
+  padding: 15px;
+  background: rgba(255,255,255,0.5);
+  margin-left: auto;
+  margin-right:auto;
+  
+
+}
+
+.name{
+  padding-top: 1rem;
+  width: 100%;
+  min-width: 100%;
+}
+
+
+.click-div{
+  margin-top: 4rem;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet/css" href="css/names.css">
+
+</head>
+
+<body style="background-color: rgb(183, 241, 255);">
+    <!-- boy rgb(193, 255, 221) -->
+    <div style="margin-top:5rem;font-family: 'Acme', sans-serif; font-size:3.5rem ;text-align:center;color: cornflowerblue;" class="row">
+        <div class="col-1">
+          <!-- boy  cornflowerblue -->
+        </div>
+        <div class="col-10">
+            <div id="letters"></div>
+        </div>
+
+        <div class="col-1">
+
+        </div>
+     
+
+    </div>
+
+
+    <div style="margin-top:5rem;font-family: 'Acme', sans-serif; font-size:3.5rem ;text-align:center;color:rgb(92, 87, 79)" class="row">
+        <div class="col-1">
+
+        </div>
+        <div class="col-10">
+            <div id="letters2"></div>
+        </div>
+
+        <div class="col-1">
+
+        </div>
+     
+
+    </div>
+       
+   
+   
+    
+<script>
+
+//     confetti({
+//         particleCount: 150,
+//         spread:180
+// });
+var duration = 1600;
+var end = Date.now() + duration;
+var done = false;
+ 
+(function frame() {
+  // launch a few confetti from the left edge
+  confetti({
+    particleCount: 7,
+    angle: 60,
+    spread: 55,
+    origin: { x: 0 },
+    colors:["#539edb"],
+    gravity:0.5
+  });
+  // and launch a few from the right edge
+  confetti({
+    particleCount: 7,
+    angle: 120,
+    spread: 55,
+    origin: { x: 1 },
+    colors:["#539edb"],
+    gravity:0.5
+
+  });
+
+  confetti({
+    particleCount: 7,
+    angle: 270,
+    spread: 55,
+    origin: { y:0 },
+    colors:["#539edb"],
+    gravity:0.5
+
+    //boy  #539edb 
+  });
+ 
+  // keep going until we are out of time
+  if (Date.now() < end) {
+    requestAnimationFrame(frame);
+  }
+  done=true;
+}());
+
+
+var text = "We're Having a baby Boy  ";
+var text2 = "Thank you for participating The Winner is  Dima Dabbas ";
+
+var textElements = text.split("").map(function(c) {
+  return $('<span id="' + c + '">' + c + '</span>');
+});
+
+var textElements2 = text2.split("").map(function(c) {
+  return $('<span id="' + c + '">' + c + '</span>');
+});
+
+var el = $('#letters');
+var el2 = $('#letters2');
+var delay = 100; // Tune this for different letter delays.
+textElements.forEach(function(e, i) {
+  el.append(e);
+  e.hide();
+  setTimeout(function() {
+    e.fadeIn(300)
+  }, 100 + i * delay)
+})
+
+textElements2.forEach(function(e, i) {
+  el2.append(e);
+  e.hide();
+  setTimeout(function() {
+    e.fadeIn(300)
+  }, 100 + i * delay)
+})
+
+
+
+</script>
+
+</body>
+</html>
+
+</script>
+
+</body>
+
+</html>
